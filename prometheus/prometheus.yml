@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 3s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Nanti anggota lain akan mendaftarkan IP laptop mereka di sini
+  - job_name: 'dico'
+    static_configs:
+      - targets: ['192.168.1.106:3000'] # Ganti dengan IP laptop teman
+
+  - job_name: 'adam'
+    static_configs:
+      - targets: ['192.168.1.109:3000']
+
+  - job_name: 'anggi'
+    static_configs:
+      - targets: ['192.168.1.106:3000']
+
+  - job_name: 'fadil'
+    static_configs:
+      - targets: ['192.168.1.106:3000']
