@@ -1,5 +1,5 @@
 global:
-  scrape_interval: 3s
+  scrape_interval: 5s
 
 scrape_configs:
   - job_name: 'prometheus'
@@ -9,16 +9,21 @@ scrape_configs:
   # Nanti anggota lain akan mendaftarkan IP laptop mereka di sini
   - job_name: 'dico'
     static_configs:
-      - targets: ['192.168.1.106:3000'] # Ganti dengan IP laptop teman
+      - targets: ['10.161.36.6:3000'] # Ganti dengan IP laptop teman
 
-  - job_name: 'adam'
-    static_configs:
-      - targets: ['192.168.1.109:3000']
+  # - job_name: 'adam'
+  #   static_configs:
+  #     - targets: ['192.168.1.109:3000']
 
   - job_name: 'anggi'
     static_configs:
-      - targets: ['192.168.1.106:3000']
+      - targets: ['10.161.36.119:3000']
 
-  - job_name: 'fadil'
+  # - job_name: 'fadil'
+  #   static_configs:
+  #     - targets: ['192.168.1.106:3000'] 
+
+  - job_name: 'jakak'
     static_configs:
-      - targets: ['192.168.1.106:3000']
+      - targets: ['10.161.36.54:3000']
+   
